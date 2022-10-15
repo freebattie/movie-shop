@@ -67,7 +67,7 @@ public class MovieServer {
         servletContexHandler.addServlet(servletHolder,"/*");
         return  servletContexHandler;
     }
-   
+
 
     // swap out java classes with resources with webapp
     private File getSourceDirectory(Resource resource) throws IOException {
