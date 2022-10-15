@@ -59,13 +59,13 @@ public class MovieServer {
     }
 
     private ServletContextHandler createApiEndPoint() {
-        var servletContexHandler = new ServletContextHandler(server,"/api");
-        servletContexHandler.setContextPath("/api");
+        var servletContextHandler = new ServletContextHandler(server,"/api");
+        servletContextHandler.setContextPath("/api");
         var servletContainer = new ServletContainer(new ShopConfig());
         var servletHolder = new ServletHolder(servletContainer);
 
-        servletContexHandler.addServlet(servletHolder,"/*");
-        return  servletContexHandler;
+        servletContextHandler.addServlet(servletHolder,"/*");
+        return  servletContextHandler;
     }
 
 
